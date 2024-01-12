@@ -1,0 +1,87 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #000;
+}
+
+.video-container {
+    position: relative;
+    width: 360px;
+    height: 640px;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.2));
+}
+
+.controls {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    margin-right: 10px;
+    cursor: pointer;
+    outline: none;
+    color: #1DA1F2;
+    transition: color 0.3s ease-in-out;
+}
+
+button:hover {
+    color: #fff;
+}
+
+input[type="range"] {
+    width: 80px;
+    margin-right: 10px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    background-color: #1DA1F2;
+    border: 1px solid #1DA1F2;
+    border-radius: 50%;
+}
+
+.video-info {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.video-info h2 {
+    font-size: 16px;
+    margin: 0;
+}
+
+.video-info p {
+    font-size: 12px;
+    margin: 0;
+}
